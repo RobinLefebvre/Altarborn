@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "3ccafeb2-5eeb-4daf-8563-c1ae3819840e",
+		"name": "Altarborn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "souls/all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:6060/souls/all",
+					"host": [
+						"localhost"
+					],
+					"port": "6060",
+					"path": [
+						"souls",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "souls/get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:6060/users/get?name=Nobby Avesta",
+					"host": [
+						"localhost"
+					],
+					"port": "6060",
+					"path": [
+						"users",
+						"get"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Nobby Avesta"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "souls/logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:6060/users/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "6060",
+					"path": [
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "souls/login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Nobby Avesta\", \n\t\"pass\" : \"admin\"\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "localhost:6060/souls/login",
+					"host": [
+						"localhost"
+					],
+					"port": "6060",
+					"path": [
+						"souls",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "souls/delete",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\": \"Dams Avesta\"\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "localhost:6060/souls/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "6060",
+					"path": [
+						"souls",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "souls/create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"name\": \"Nobby Avesta\",\n   \"pass\": \"admin\"\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "localhost:6060/souls/create",
+					"host": [
+						"localhost"
+					],
+					"port": "6060",
+					"path": [
+						"souls",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "souls/updateRelationship",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"action\" : \"ally\",\n\t\"name\" : \"Dams Avesta\"\n}",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "localhost:6060/souls/updateRelationship",
+					"host": [
+						"localhost"
+					],
+					"port": "6060",
+					"path": [
+						"souls",
+						"updateRelationship"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
