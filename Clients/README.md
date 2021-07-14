@@ -1,6 +1,6 @@
-# Altarborn - docs & stuff
-Repository for the Altarborn documentation, helper files, additonal tools, and so on and so forth.
+# Altarborn - Client applications
+Repository for the Altarborn client apps. This will hold several applications, web pages, webservices and other tools that the Altarborn *actual playerbase* will have access to on our hosted versions of the game. 
 
 Currently it holds : 
-- PostMan collection of calls to use when testing the API.
+- Ziltch, nada, rien, nothing.
 
