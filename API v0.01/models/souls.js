@@ -20,8 +20,6 @@ module.exports = class Soul
     this.allies = args.allies || [];
     this.blocks = args.blocks || [];
     this.hostiles = args.hostiles || [];
-
-    console.log(this)
   }
 
   /** @function init - handles the creation of the Souls collection at application start-up, assuming the collection does not already exist. See /db.js and the initializeCollections function for more.
@@ -39,7 +37,7 @@ module.exports = class Soul
   {
     try
     {
-      console.log(`Creating new Soul ${this.name}.`);
+      console.log(`Attempting to create Soul ${this.name}.`);
       let soulsCollection = db.get().collection('souls');
 
       let soulExists = await soulsCollection.findOne({name : this.name})

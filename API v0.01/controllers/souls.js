@@ -20,12 +20,12 @@ router.post('/create', async (request, response, next) =>
   {
     let b = request.body;
     let soul = new Soul(b);
-    console.log(soul)
     await soul.create();
     response.status(200).send(soul);
   } 
   catch(error)
   {
+    console.log(error.message)
     next(error);
   }
 }); 
@@ -43,6 +43,7 @@ router.post('/delete', async (request, response, next) =>
   } 
   catch(error)
   {
+    console.log(error.message)
     next(error);
   }
 }); 
@@ -60,6 +61,7 @@ router.get('/get', async (request, response, next) =>
   }
   catch (error) 
   {
+    console.log(error.message)
     next(error);
   }
 }); 
@@ -74,6 +76,7 @@ router.get('/all', async (request, response, next) =>
   }
   catch(error)
   {
+    console.log(error.message)
     next(error);
   }
 }); 
@@ -96,6 +99,7 @@ router.post('/updateRelationship', auth, async (request, response, next) =>
   }
   catch(error)
   {
+    console.log(error.message)
     next(error);
   }
 }); 
@@ -126,6 +130,7 @@ router.post('/login', async (request, response, next) =>
     }
     catch (error)
     {
+      console.log(error.message)
       next(error);
     }
   }

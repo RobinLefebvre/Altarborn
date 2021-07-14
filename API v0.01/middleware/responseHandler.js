@@ -17,7 +17,7 @@ exports.handleCors = (request, response, next) =>
     if (request.method === 'OPTIONS') 
     {
         response.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
-        return response.status(200).json({});
+        return response.status(200).send({});
     }
     next();
 }
@@ -27,7 +27,7 @@ exports.respondError = (error, request, response, next) =>
 {
     response.status(error.status || 500);
     console.log(error);
-    response.json({ message : error.message, status : error.status })
+    response.send({ message : error.message, status : error.status })
 }
 /** @function respond404 - At the end of routing, if no middleware sent a response, we send 404 back */
 exports.respond404 = (request, response, next) => 
