@@ -1,0 +1,24 @@
+Actual VPS configuration :
+
+Debian 10 - 1 vCore - 2 GB RAM - 40 GB NVME Storage
+
+How to deploy the basic software
+
+  Copy/past the bashscript at #############
+  Run the script with sudo right
+    
+    bash xxxxx.sh
+    
+  The script will install all requiered software
+  The script will setup the config user for git
+  The script will create the right repostiry on the webserver
+  The script will clone the github repo in it
+  
+
+Get ready to work
+
+  Connect with user acess 
+  Navigate to the project directory 
+  cd /var/www/altarborn.com
+
+You are now ready to work !
