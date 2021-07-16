@@ -19,7 +19,7 @@ app.use(responseHandler.handleCors);
 /** Console Logs - Morgan */
 const morgan = require('morgan'); // - Morgan for loggin API requests
 morgan.token('sessionid', function(req) {return req.sessionID;});
-morgan.token('user', function(req) {if(req.session && req.session.user && req.session.user.name){ return req.session.user.name} return "Anonymous User";});
+morgan.token('user', function(req) {if(req.session && req.session.soul && req.session.soul.name){ return req.session.soul.name} return "Anonymous User";});
 app.use(morgan(`\n[-- :date --]\n :user - :sessionid @ :remote-addr \n - :method \t\t- :url \n - Response Status \t- :status \n - Response Size \t- :res[content-length] bytes \n - Response Time \t- :response-time ms\n`)); 
 /** Sessions management */
 const session = require('express-session'); // - Express Session (cookies & sessions)
